@@ -302,19 +302,14 @@
 
       
         
-          
-            <p>推荐在循环对象属性的时候，使用 for…in,在遍历数组的时候的时候使用 for…of。</p>
-<p>for…in 循环出的是 <em>key</em>，for…of 循环出的是 <em>value</em></p>
-<p>注意，for…of 是 ES6 新引入的特性。修复了 ES5 引入的 for…in 的不足</p>
-<p>for…of 不能循环普通的对象，需要通过和 Object.keys()搭配使用</p>
-<blockquote>
-<p>for-in 循环除了遍历数组元素以外,还会遍历自定义属性。</p>
-</blockquote>
-<p>for…of 循环不会循环对象的 key，只会循环出数组的 value，因此 for…of 不能循环遍历普通对象,对普通对象的属性遍历推荐使用 for…in</p>
-<p>如果实在想用 for…of 来遍历普通对象的属性的话，可以通过和 Object.keys()搭配使用，先获取对象的所有 key 的数组然后遍历：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var student=&#123;</span><br><span class="line">    name:&apos;wujunchuan&apos;,</span><br><span class="line">    age:22,</span><br><span class="line">    locate:&#123;</span><br><span class="line">    country:&apos;china&apos;,</span><br><span class="line">    city:&apos;xiamen&apos;,</span><br><span class="line">    school:&apos;XMUT&apos;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">for(var key of Object.keys(student))&#123;</span><br><span class="line">    //使用Object.keys()方法获取对象key的数组</span><br><span class="line">    console.log(key+&quot;: &quot;+student[key]);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
+          <p>推荐在循环对象属性的时候，使用 for…in,在遍历数组的时候的时候使用 for…of。<br>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/02/06/for-in-和for-of的区别/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
       
     </div>
