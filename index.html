@@ -303,127 +303,8 @@
       
         
           
-            <h2 id="path和pyblicPath的区别"><a href="#path和pyblicPath的区别" class="headerlink" title="path和pyblicPath的区别"></a>path和pyblicPath的区别</h2><p>webpackConfig里会有path和publicpath<br><code>path：用来存放打包后文件的输出目录</code><br><code>publicPath：指定资源文件引用的目录</code><br>用处：例如在express中，指定了public/dist是网站的根目录，网站的源文件存放在public中，那么就需要设置path:”./dist”指定打包输出到该目录<br>而publicPath就需要设置为”/”,表示当前路径<br>publicPath取决于你的网站根目录的位置，因为打包的文件都在网站根目录了，这些文件的引用都是基于该目录的。假设网站根目录为public，引用的图片路径是’./img.png’，如果publicPath为’/’，图片显示不了，因为图片都打包放在了dist中，那么你就要把publicPath设置为”/dist”。</p>
+            <h2 id="path-和-pyblicPath-的区别"><a href="#path-和-pyblicPath-的区别" class="headerlink" title="path 和 pyblicPath 的区别"></a>path 和 pyblicPath 的区别</h2><p>webpackConfig 里会有 path 和 publicpath<br><code>path：用来存放打包后文件的输出目录</code><br><code>publicPath：指定资源文件引用的目录</code><br>用处：例如在 express 中，指定了 public/dist 是网站的根目录，网站的源文件存放在 public 中，那么就需要设置 path:”./dist”指定打包输出到该目录<br>而 publicPath 就需要设置为”/”,表示当前路径<br>publicPath 取决于你的网站根目录的位置，因为打包的文件都在网站根目录了，这些文件的引用都是基于该目录的。假设网站根目录为 public，引用的图片路径是’./img.png’，如果 publicPath 为’/’，图片显示不了，因为图片都打包放在了 dist 中，那么你就要把 publicPath 设置为”/dist”。</p>
 
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="https://github.com/2018/04/17/note3/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Hu">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="卡拉赞歌剧院">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/04/17/note3/" itemprop="url">note3</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-04-17T10:11:16+08:00">
-                2018-04-17
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
           
         
       
@@ -542,9 +423,10 @@
       
         
           
-            <h2 id="给文字排序"><a href="#给文字排序" class="headerlink" title="给文字排序"></a>给文字排序</h2><p>res.sort((a,b)=&gt;{<br>  return a.title.charCodeAt(0)-b.title.CharCodeAt(0)<br>})</p>
-<h2 id="路由列表的meta字段"><a href="#路由列表的meta字段" class="headerlink" title="路由列表的meta字段"></a>路由列表的meta字段</h2><p>路由列表的meta字段可以自定义一些信息,比如title<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  path:&apos;/user/id&apos;,</span><br><span class="line">  meta:&#123;</span><br><span class="line">    title:&apos;个人主页&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这样就可以用路由的全局钩子来 to.meta.title设置title标题</p>
+            <h2 id="给文字排序"><a href="#给文字排序" class="headerlink" title="给文字排序"></a>给文字排序</h2><p>res.sort((a,b)=&gt;{<br>return a.title.charCodeAt(0)-b.title.CharCodeAt(0)<br>})</p>
+<h2 id="路由列表的-meta-字段"><a href="#路由列表的-meta-字段" class="headerlink" title="路由列表的 meta 字段"></a>路由列表的 meta 字段</h2><p>路由列表的 meta 字段可以自定义一些信息,比如 title</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">  path:&apos;/user/id&apos;,</span><br><span class="line">  meta:&#123;</span><br><span class="line">    title:&apos;个人主页&apos;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>这样就可以用路由的全局钩子来 to.meta.title 设置 title 标题</p>
 
           
         
@@ -664,7 +546,7 @@
       
         
           
-            <h2 id="判断是否一样"><a href="#判断是否一样" class="headerlink" title="判断是否一样"></a>判断是否一样</h2><p>Object.is()<br>可以判断NaN这样的</p>
+            <h2 id="判断是否一样"><a href="#判断是否一样" class="headerlink" title="判断是否一样"></a>判断是否一样</h2><p>Object.is()<br>可以判断 NaN 这样的</p>
 
           
         
@@ -783,7 +665,7 @@
 
       
         
-          <p>推荐在循环对象属性的时候，使用 for…in,在遍历数组的时候的时候使用 for…of。<br>
+          <p>推荐在循环对象属性的时候，使用 for…in,在遍历数组的时候的时候使用 for…of。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/02/06/for-in-和for-of的区别/#more" rel="contents">
@@ -907,7 +789,7 @@
 
       
         
-          <h3 id="在vue中往往需要添加动画-但是并不像JQ一样可以比较容易的添加-经常我会避免使用动画-这样就不用考虑了-但是在类似轮播图中-还是需要动画效果"><a href="#在vue中往往需要添加动画-但是并不像JQ一样可以比较容易的添加-经常我会避免使用动画-这样就不用考虑了-但是在类似轮播图中-还是需要动画效果" class="headerlink" title="在vue中往往需要添加动画,但是并不像JQ一样可以比较容易的添加,经常我会避免使用动画,这样就不用考虑了,但是在类似轮播图中,还是需要动画效果"></a>在vue中往往需要添加动画,但是并不像JQ一样可以比较容易的添加,经常我会避免使用动画,这样就不用考虑了,但是在类似轮播图中,还是需要动画效果</h3>
+          <h3 id="在-vue-中往往需要添加动画-但是并不像-JQ-一样可以比较容易的添加-经常我会避免使用动画-这样就不用考虑了-但是在类似轮播图中-还是需要动画效果"><a href="#在-vue-中往往需要添加动画-但是并不像-JQ-一样可以比较容易的添加-经常我会避免使用动画-这样就不用考虑了-但是在类似轮播图中-还是需要动画效果" class="headerlink" title="在 vue 中往往需要添加动画,但是并不像 JQ 一样可以比较容易的添加,经常我会避免使用动画,这样就不用考虑了,但是在类似轮播图中,还是需要动画效果"></a>在 vue 中往往需要添加动画,但是并不像 JQ 一样可以比较容易的添加,经常我会避免使用动画,这样就不用考虑了,但是在类似轮播图中,还是需要动画效果</h3>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/30/vue的过渡动画/#more" rel="contents">
@@ -1031,8 +913,8 @@
 
       
         
-          <h2 id="转自知乎-夜鸣东徙-理解JavaScript-Promise"><a href="#转自知乎-夜鸣东徙-理解JavaScript-Promise" class="headerlink" title="转自知乎 夜鸣东徙:理解JavaScript Promise"></a><font color="#999">转自知乎 <a href="https://zhuanlan.zhihu.com/p/26523836" target="_blank" rel="noopener"><font color="#ff335e">夜鸣东徙:理解JavaScript Promise</font></a></font></h2><h2 id="从一脸懵逼，到认识、掌握并使用Promise……"><a href="#从一脸懵逼，到认识、掌握并使用Promise……" class="headerlink" title="从一脸懵逼，到认识、掌握并使用Promise……"></a>从一脸懵逼，到认识、掌握并使用Promise……</h2><p>ES2015出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是Promise。不学会Promise，都不好意思说自己懂ES6了！</p>
-<p>那么Promise到底是个什么鬼？！像我这样的JavaScript小菜，初次看到，着实一脸懵逼。</p>
+          <h2 id="转自知乎-夜鸣东徙-理解-JavaScript-Promise"><a href="#转自知乎-夜鸣东徙-理解-JavaScript-Promise" class="headerlink" title="转自知乎 夜鸣东徙:理解 JavaScript Promise"></a><font color="#999">转自知乎 <a href="https://zhuanlan.zhihu.com/p/26523836" target="_blank" rel="noopener"><font color="#ff335e">夜鸣东徙:理解 JavaScript Promise</font></a></font></h2><h2 id="从一脸懵逼，到认识、掌握并使用-Promise……"><a href="#从一脸懵逼，到认识、掌握并使用-Promise……" class="headerlink" title="从一脸懵逼，到认识、掌握并使用 Promise……"></a>从一脸懵逼，到认识、掌握并使用 Promise……</h2><p>ES2015 出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是 Promise。不学会 Promise，都不好意思说自己懂 ES6 了！</p>
+<p>那么 Promise 到底是个什么鬼？！像我这样的 JavaScript 小菜，初次看到，着实一脸懵逼。</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/26/promise/#more" rel="contents">
@@ -1157,8 +1039,10 @@
       
         
           
-            <h2 id="指定vue的默认路径"><a href="#指定vue的默认路径" class="headerlink" title="指定vue的默认路径"></a>指定vue的默认路径</h2><p>可以在<code>webpack.config.js</code>里的<code>alias</code>里指定默认的文件路径,减少以后的工作量<br>例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alias: &#123;</span><br><span class="line">  &apos;vue$&apos;: &apos;vue/dist/vue.esm.js&apos;,</span><br><span class="line">  &apos;@&apos;: resolve(&apos;src&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>以后就可以使用<code>import A from &#39;@/components/a.vue&#39;</code>这样来用@代替src,其他例如<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;commons&apos;: resolve(&apos;src/components/commons&apos;)</span><br></pre></td></tr></table></figure></p>
+            <h2 id="指定-vue-的默认路径"><a href="#指定-vue-的默认路径" class="headerlink" title="指定 vue 的默认路径"></a>指定 vue 的默认路径</h2><p>可以在<code>webpack.config.js</code>里的<code>alias</code>里指定默认的文件路径,减少以后的工作量<br>例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">alias: &#123;</span><br><span class="line">  &apos;vue$&apos;: &apos;vue/dist/vue.esm.js&apos;,</span><br><span class="line">  &apos;@&apos;: resolve(&apos;src&apos;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>以后就可以使用<code>import A from &#39;@/components/a.vue&#39;</code>这样来用@代替 src,其他例如</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&apos;commons&apos;: resolve(&apos;src/components/commons&apos;)</span><br></pre></td></tr></table></figure>
 <p>不需要再写那么长的一串了</p>
 
           
@@ -1278,7 +1162,7 @@
 
       
         
-          <h2 id="用hexo搭建的博客"><a href="#用hexo搭建的博客" class="headerlink" title="用hexo搭建的博客"></a>用hexo搭建的博客</h2><p>这是用hexo搭建的博客 用 <code>hexo new &#39;标题名&#39;</code>创建标题<br>
+          <h2 id="用-hexo-搭建的博客"><a href="#用-hexo-搭建的博客" class="headerlink" title="用 hexo 搭建的博客"></a>用 hexo 搭建的博客</h2><p>这是用 hexo 搭建的博客 用 <code>hexo new &#39;标题名&#39;</code>创建标题</p>
           <!--noindex-->
           <div class="post-button text-center">
             <a class="btn" href="/2018/01/24/第一/#more" rel="contents">
@@ -1493,7 +1377,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>

@@ -79,17 +79,17 @@
 
 
 
-<meta name="description" content="转自知乎 夜鸣东徙:理解JavaScript Promise从一脸懵逼，到认识、掌握并使用Promise……ES2015出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是Promise。不学会Promise，都不好意思说自己懂ES6了！ 那么Promise到底是个什么鬼？！像我这样的JavaScript小菜，初次看到，着实一脸懵逼。">
+<meta name="description" content="转自知乎 夜鸣东徙:理解 JavaScript Promise从一脸懵逼，到认识、掌握并使用 Promise……ES2015 出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是 Promise。不学会 Promise，都不好意思说自己懂 ES6 了！ 那么 Promise 到底是个什么鬼？！像我这样的 JavaScript 小菜，初次看到，着实一脸懵逼。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="理解promise">
 <meta property="og:url" content="https://github.com/2018/01/26/promise/index.html">
 <meta property="og:site_name" content="卡拉赞歌剧院">
-<meta property="og:description" content="转自知乎 夜鸣东徙:理解JavaScript Promise从一脸懵逼，到认识、掌握并使用Promise……ES2015出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是Promise。不学会Promise，都不好意思说自己懂ES6了！ 那么Promise到底是个什么鬼？！像我这样的JavaScript小菜，初次看到，着实一脸懵逼。">
+<meta property="og:description" content="转自知乎 夜鸣东徙:理解 JavaScript Promise从一脸懵逼，到认识、掌握并使用 Promise……ES2015 出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是 Promise。不学会 Promise，都不好意思说自己懂 ES6 了！ 那么 Promise 到底是个什么鬼？！像我这样的 JavaScript 小菜，初次看到，着实一脸懵逼。">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-01-26T15:53:31.040Z">
+<meta property="og:updated_time" content="2018-07-17T02:41:34.500Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="理解promise">
-<meta name="twitter:description" content="转自知乎 夜鸣东徙:理解JavaScript Promise从一脸懵逼，到认识、掌握并使用Promise……ES2015出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是Promise。不学会Promise，都不好意思说自己懂ES6了！ 那么Promise到底是个什么鬼？！像我这样的JavaScript小菜，初次看到，着实一脸懵逼。">
+<meta name="twitter:description" content="转自知乎 夜鸣东徙:理解 JavaScript Promise从一脸懵逼，到认识、掌握并使用 Promise……ES2015 出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是 Promise。不学会 Promise，都不好意思说自己懂 ES6 了！ 那么 Promise 到底是个什么鬼？！像我这样的 JavaScript 小菜，初次看到，着实一脸懵逼。">
 
 
 
@@ -299,82 +299,94 @@
       
 
       
-        <h2 id="转自知乎-夜鸣东徙-理解JavaScript-Promise"><a href="#转自知乎-夜鸣东徙-理解JavaScript-Promise" class="headerlink" title="转自知乎 夜鸣东徙:理解JavaScript Promise"></a><font color="#999">转自知乎 <a href="https://zhuanlan.zhihu.com/p/26523836" target="_blank" rel="noopener"><font color="#ff335e">夜鸣东徙:理解JavaScript Promise</font></a></font></h2><h2 id="从一脸懵逼，到认识、掌握并使用Promise……"><a href="#从一脸懵逼，到认识、掌握并使用Promise……" class="headerlink" title="从一脸懵逼，到认识、掌握并使用Promise……"></a>从一脸懵逼，到认识、掌握并使用Promise……</h2><p>ES2015出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是Promise。不学会Promise，都不好意思说自己懂ES6了！</p>
-<p>那么Promise到底是个什么鬼？！像我这样的JavaScript小菜，初次看到，着实一脸懵逼。</p>
+        <h2 id="转自知乎-夜鸣东徙-理解-JavaScript-Promise"><a href="#转自知乎-夜鸣东徙-理解-JavaScript-Promise" class="headerlink" title="转自知乎 夜鸣东徙:理解 JavaScript Promise"></a><font color="#999">转自知乎 <a href="https://zhuanlan.zhihu.com/p/26523836" target="_blank" rel="noopener"><font color="#ff335e">夜鸣东徙:理解 JavaScript Promise</font></a></font></h2><h2 id="从一脸懵逼，到认识、掌握并使用-Promise……"><a href="#从一脸懵逼，到认识、掌握并使用-Promise……" class="headerlink" title="从一脸懵逼，到认识、掌握并使用 Promise……"></a>从一脸懵逼，到认识、掌握并使用 Promise……</h2><p>ES2015 出来之后，什么箭头函数、类声明、解构赋值等新概念冒了出来，其中一个重要的概念就是 Promise。不学会 Promise，都不好意思说自己懂 ES6 了！</p>
+<p>那么 Promise 到底是个什么鬼？！像我这样的 JavaScript 小菜，初次看到，着实一脸懵逼。</p>
 <a id="more"></a>
-<h2 id="本文结构"><a href="#本文结构" class="headerlink" title="本文结构"></a>本文结构</h2><p>本文从下面几个问题，逐步了解JavaScript Promise的概念和用法，重点是概念啦，用法什么的网上有很多资料参考</p>
+<h2 id="本文结构"><a href="#本文结构" class="headerlink" title="本文结构"></a>本文结构</h2><p>本文从下面几个问题，逐步了解 JavaScript Promise 的概念和用法，重点是概念啦，用法什么的网上有很多资料参考</p>
 <ul>
-<li>Promise是什么？</li>
+<li>Promise 是什么？</li>
 <li>有什么用？解决了什么问题？</li>
-<li>怎么使用Promise?<h3 id="剩下部分整理了一些Promise习题和示例，以及参考资料"><a href="#剩下部分整理了一些Promise习题和示例，以及参考资料" class="headerlink" title="剩下部分整理了一些Promise习题和示例，以及参考资料"></a>剩下部分整理了一些Promise习题和示例，以及参考资料</h3></li>
+<li>怎么使用 Promise?</li>
+</ul>
+<h3 id="剩下部分整理了一些-Promise-习题和示例，以及参考资料"><a href="#剩下部分整理了一些-Promise-习题和示例，以及参考资料" class="headerlink" title="剩下部分整理了一些 Promise 习题和示例，以及参考资料"></a>剩下部分整理了一些 Promise 习题和示例，以及参考资料</h3><ul>
 <li>习题和示例</li>
 <li>参考资料</li>
 </ul>
-<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>当我们谈到，或者看到别人提及Promise的时候，什么回调函数、异步编程、流程控制这样的术语冒了出来，还有，取了个Promise这样的名字，究竟是何含义。首先通通都别care，没那么复杂。</p>
-<p>Promise说得通俗一点就是一种写代码的方式，并且是用来写JavaScript编程中的异步代码的。</p>
-<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>首先要认清最基本的用法。一般学习Promise看到的第一段代码是这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">let p = new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">  // 做一些事情</span><br><span class="line">  // 然后在某些条件下resolve，或者reject</span><br><span class="line">  if (/* 条件随便写^_^ */) &#123;</span><br><span class="line">    resolve()</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    reject()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">p.then(() =&gt; &#123;</span><br><span class="line">    // 如果p的状态被resolve了，就进入这里</span><br><span class="line">&#125;, () =&gt; &#123;</span><br><span class="line">    // 如果p的状态被reject</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<h3 id="解释一下"><a href="#解释一下" class="headerlink" title="解释一下"></a>解释一下</h3><p>第一段调用了Promise构造函数，第二段是调用了promise实例的.then方法</p>
+<h2 id="是什么"><a href="#是什么" class="headerlink" title="是什么"></a>是什么</h2><p>当我们谈到，或者看到别人提及 Promise 的时候，什么回调函数、异步编程、流程控制这样的术语冒了出来，还有，取了个 Promise 这样的名字，究竟是何含义。首先通通都别 care，没那么复杂。</p>
+<p>Promise 说得通俗一点就是一种写代码的方式，并且是用来写 JavaScript 编程中的异步代码的。</p>
+<h3 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h3><p>首先要认清最基本的用法。一般学习 Promise 看到的第一段代码是这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">let p = new Promise((resolve, reject) =&gt; &#123;</span><br><span class="line">  // 做一些事情</span><br><span class="line">  // 然后在某些条件下resolve，或者reject</span><br><span class="line">  if (/* 条件随便写^_^ */) &#123;</span><br><span class="line">    resolve()</span><br><span class="line">  &#125; else &#123;</span><br><span class="line">    reject()</span><br><span class="line">  &#125;</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">p.then(() =&gt; &#123;</span><br><span class="line">    // 如果p的状态被resolve了，就进入这里</span><br><span class="line">&#125;, () =&gt; &#123;</span><br><span class="line">    // 如果p的状态被reject</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="解释一下"><a href="#解释一下" class="headerlink" title="解释一下"></a>解释一下</h3><p>第一段调用了 Promise 构造函数，第二段是调用了 promise 实例的.then 方法</p>
 <p>1 构造实例</p>
 <ul>
 <li>构造函数接受一个函数作为参数</li>
-<li>调用构造函数得到实例p的同时，作为参数的函数会立即执行</li>
-<li>参数函数接受两个回调函数参数resolve和reject</li>
-<li>在参数函数被执行的过程中，如果在其内部调用resolve，会将p的状态变成fulfilled，或者调用reject，会将p的状态变成rejected</li>
+<li>调用构造函数得到实例 p 的同时，作为参数的函数会立即执行</li>
+<li>参数函数接受两个回调函数参数 resolve 和 reject</li>
+<li>在参数函数被执行的过程中，如果在其内部调用 resolve，会将 p 的状态变成 fulfilled，或者调用 reject，会将 p 的状态变成 rejected</li>
 </ul>
 <p>2 调用.then</p>
 <ul>
-<li>调用.then可以为实例p注册两种状态回调函数</li>
-<li>当实例p的状态为fulfilled，会触发第一个函数执行</li>
-<li>当实例p的状态为rejected，则触发第二个函数执行<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3>上面这样构造promise实例，然后调用.then.then.then的编写代码方式，就是promise。</li>
+<li>调用.then 可以为实例 p 注册两种状态回调函数</li>
+<li>当实例 p 的状态为 fulfilled，会触发第一个函数执行</li>
+<li>当实例 p 的状态为 rejected，则触发第二个函数执行</li>
 </ul>
+<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>上面这样构造 promise 实例，然后调用.then.then.then 的编写代码方式，就是 promise。</p>
 <p>其基本模式是：</p>
 <ul>
-<li>将异步过程转化成promise对象</li>
-<li>对象有3种状态</li>
-<li>通过.then注册状态的回调</li>
+<li>将异步过程转化成 promise 对象</li>
+<li>对象有 3 种状态</li>
+<li>通过.then 注册状态的回调</li>
 <li>已完成的状态能触发回调</li>
 </ul>
-<p>采用这种方式来处理编程中的异步任务，就是在使用promise了。<br>所以promise就是一种异步编程模式。</p>
-<h2 id="有什么用"><a href="#有什么用" class="headerlink" title="有什么用"></a>有什么用</h2><p>从JavaScript中的异步任务说起</p>
-<p>典型的异步任务，是一个setTimeout调用<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  // 爱干啥干啥</span><br><span class="line">&#125;, 1000)</span><br></pre></td></tr></table></figure></p>
-<p>通常用JS写异步任务的时候，会分成两个部分：主过程和后续过程，在主过程执行成功后，触发后续过程执行。比如，在实际编程中经常需要使用AJAX向服务器请求数据，成功获取到数据后，才开始处理数据。于是代码分成获取数据部分和处理数据部分，像下面这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getData((data) =&gt; &#123;</span><br><span class="line">  // 处理data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>采用这种方式来处理编程中的异步任务，就是在使用 promise 了。<br>所以 promise 就是一种异步编程模式。</p>
+<h2 id="有什么用"><a href="#有什么用" class="headerlink" title="有什么用"></a>有什么用</h2><p>从 JavaScript 中的异步任务说起</p>
+<p>典型的异步任务，是一个 setTimeout 调用</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">setTimeout(() =&gt; &#123;</span><br><span class="line">  // 爱干啥干啥</span><br><span class="line">&#125;, 1000)</span><br></pre></td></tr></table></figure>
+<p>通常用 JS 写异步任务的时候，会分成两个部分：主过程和后续过程，在主过程执行成功后，触发后续过程执行。比如，在实际编程中经常需要使用 AJAX 向服务器请求数据，成功获取到数据后，才开始处理数据。于是代码分成获取数据部分和处理数据部分，像下面这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">getData((data) =&gt; &#123;</span><br><span class="line">  // 处理data</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>上面这两个处理异步任务的编程方式都是采用的回调函数的形式。</p>
-<p>那么既然有回调函数这种方式，为什么还需要promise？</p>
-<p>当然是因为回调函数这种方式不好了，否则谁吃饱了没事干非要整个promise出来！</p>
-<p>也许有人说，觉得回调函数的方式没什么不好啊，我也不想否认，就像有人用习惯了windows操作系统，你说windows垃圾，改用Linux吧，balabala……其实用者开心，用得舒服就好啊。然而系统是自己用的，代码却是写给别人看的。</p>
-<h3 id="回调哪里不好了？"><a href="#回调哪里不好了？" class="headerlink" title="回调哪里不好了？"></a>回调哪里不好了？</h3><p>现在假设有多个异步任务，且任务间有依赖关系（一个任务需要拿到另一个任务成功后的结果才能开始执行）的时候，回调的方式写出来的代码就会像下面这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">getData1(data1 =&gt; &#123;</span><br><span class="line">  getData2(data1, data2 =&gt; &#123;</span><br><span class="line">    getData3(data2, data3 =&gt; &#123;</span><br><span class="line">      getData4(data3, data4 =&gt; &#123;</span><br><span class="line">        getData5(data4, data5 =&gt; &#123;</span><br><span class="line">          // 终于取到data5了</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>那么既然有回调函数这种方式，为什么还需要 promise？</p>
+<p>当然是因为回调函数这种方式不好了，否则谁吃饱了没事干非要整个 promise 出来！</p>
+<p>也许有人说，觉得回调函数的方式没什么不好啊，我也不想否认，就像有人用习惯了 windows 操作系统，你说 windows 垃圾，改用 Linux 吧，balabala……其实用者开心，用得舒服就好啊。然而系统是自己用的，代码却是写给别人看的。</p>
+<h3 id="回调哪里不好了？"><a href="#回调哪里不好了？" class="headerlink" title="回调哪里不好了？"></a>回调哪里不好了？</h3><p>现在假设有多个异步任务，且任务间有依赖关系（一个任务需要拿到另一个任务成功后的结果才能开始执行）的时候，回调的方式写出来的代码就会像下面这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">getData1(data1 =&gt; &#123;</span><br><span class="line">  getData2(data1, data2 =&gt; &#123;</span><br><span class="line">    getData3(data2, data3 =&gt; &#123;</span><br><span class="line">      getData4(data3, data4 =&gt; &#123;</span><br><span class="line">        getData5(data4, data5 =&gt; &#123;</span><br><span class="line">          // 终于取到data5了</span><br><span class="line">        &#125;)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;)</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>这种代码被称为回调地狱或者回调金字塔</p>
 <p>假设上面的任务，想要换一下执行顺序，代码修改起来，就比较麻烦了。如果内容复杂，阅读代码的时候跳来跳去，也让人头大。</p>
-<p>如果用promise改写一下：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 先把getData们都转成返回promise对象的函数</span><br><span class="line"></span><br><span class="line">// 然后</span><br><span class="line">getData1()</span><br><span class="line">.then(getData2)</span><br><span class="line">.then(getData3)</span><br><span class="line">.then(getData4)</span><br><span class="line">.then(getData5)</span><br><span class="line">.then(data =&gt; &#123;</span><br><span class="line">  // 取到最终data了</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<p>如果用 promise 改写一下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">// 先把getData们都转成返回promise对象的函数</span><br><span class="line"></span><br><span class="line">// 然后</span><br><span class="line">getData1()</span><br><span class="line">.then(getData2)</span><br><span class="line">.then(getData3)</span><br><span class="line">.then(getData4)</span><br><span class="line">.then(getData5)</span><br><span class="line">.then(data =&gt; &#123;</span><br><span class="line">  // 取到最终data了</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>这样的代码，是线性的，符合人的阅读习惯，代码表示的流程清晰，便于阅读</p>
-<h3 id="异步任务并行"><a href="#异步任务并行" class="headerlink" title="异步任务并行"></a>异步任务并行</h3><p>有了多个异步任务后，下面假设想要多个异步任务并行执行，获取执行成功后，才处理结果。用回调方式来写，可采用下面的办法：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let tasks = [getData1, getData2, getData3, getData4, getData5]</span><br><span class="line">let datas = []</span><br><span class="line"></span><br><span class="line">tasks.forEach(task =&gt; &#123;</span><br><span class="line">  task(data =&gt; &#123;</span><br><span class="line">    datas.push(data)</span><br><span class="line"></span><br><span class="line">    if (datas.length == tasks.length) &#123;</span><br><span class="line">      // datas里已经包含全部的数据了</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
-<p>上面结合数组，使用了forEach方法来为每个任务传入回调。如果改用promise来实现，代码会是这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 先要把getData们转成promise对象</span><br><span class="line"></span><br><span class="line">// 然后</span><br><span class="line">Promise.all([</span><br><span class="line">  getData1,</span><br><span class="line">  getData2,</span><br><span class="line">  getData3,</span><br><span class="line">  getData4,</span><br><span class="line">  getData5</span><br><span class="line">]).then(datas =&gt; &#123;</span><br><span class="line">  // 已拿到全部的data，可以处理了</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
+<h3 id="异步任务并行"><a href="#异步任务并行" class="headerlink" title="异步任务并行"></a>异步任务并行</h3><p>有了多个异步任务后，下面假设想要多个异步任务并行执行，获取执行成功后，才处理结果。用回调方式来写，可采用下面的办法：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">let tasks = [getData1, getData2, getData3, getData4, getData5]</span><br><span class="line">let datas = []</span><br><span class="line"></span><br><span class="line">tasks.forEach(task =&gt; &#123;</span><br><span class="line">  task(data =&gt; &#123;</span><br><span class="line">    datas.push(data)</span><br><span class="line"></span><br><span class="line">    if (datas.length == tasks.length) &#123;</span><br><span class="line">      // datas里已经包含全部的数据了</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>上面结合数组，使用了 forEach 方法来为每个任务传入回调。如果改用 promise 来实现，代码会是这样：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 先要把getData们转成promise对象</span><br><span class="line"></span><br><span class="line">// 然后</span><br><span class="line">Promise.all([</span><br><span class="line">  getData1,</span><br><span class="line">  getData2,</span><br><span class="line">  getData3,</span><br><span class="line">  getData4,</span><br><span class="line">  getData5</span><br><span class="line">]).then(datas =&gt; &#123;</span><br><span class="line">  // 已拿到全部的data，可以处理了</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
 <p>可以看到，下面的代码更清晰易读</p>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>既然promise是一种更好的编程方式，那么现在就要好好了解下它的内容和各部分的作用了。其实这节重点是内容，怎么用还得靠看官自己去实践。不过，了解内容和作用是学会使用的前提和关键。</p>
-<h3 id="3种状态"><a href="#3种状态" class="headerlink" title="3种状态"></a>3种状态</h3><p>首先，promise实例有三种状态：</p>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><p>既然 promise 是一种更好的编程方式，那么现在就要好好了解下它的内容和各部分的作用了。其实这节重点是内容，怎么用还得靠看官自己去实践。不过，了解内容和作用是学会使用的前提和关键。</p>
+<h3 id="3-种状态"><a href="#3-种状态" class="headerlink" title="3 种状态"></a>3 种状态</h3><p>首先，promise 实例有三种状态：</p>
 <ul>
 <li>pending（待定）</li>
 <li>fulfilled（已执行）</li>
-<li>rejected（已拒绝）<br>fulfilled和rejected有可以说是已成功和已失败，这两种状态又归为已完成状态<br><strong>resolve</strong>和<strong>reject</strong></li>
+<li>rejected（已拒绝）<br>fulfilled 和 rejected 有可以说是已成功和已失败，这两种状态又归为已完成状态<br><strong>resolve</strong>和<strong>reject</strong></li>
 </ul>
-<p>调用resolve和reject能将分别将promise实例的状态变成fulfilled和rejected，只有状态变成已完成（即fulfilled和rejected之一），才能触发状态的回调</p>
-<h3 id="Promise-API"><a href="#Promise-API" class="headerlink" title="Promise API"></a>Promise API</h3><p>promise的内容分为构造函数、实例方法和静态方法</p>
+<p>调用 resolve 和 reject 能将分别将 promise 实例的状态变成 fulfilled 和 rejected，只有状态变成已完成（即 fulfilled 和 rejected 之一），才能触发状态的回调</p>
+<h3 id="Promise-API"><a href="#Promise-API" class="headerlink" title="Promise API"></a>Promise API</h3><p>promise 的内容分为构造函数、实例方法和静态方法</p>
 <ul>
-<li>1个构造函数： new Promise</li>
-<li>2个实例方法：.then 和 .catch</li>
-<li>4个静态方法：Promise.all、Promise.race、Promise.resolve和Promise.reject<br>其中Promise.race不常用，本文忽略<br>下面逐个讲下他们的作用</li>
+<li>1 个构造函数： new Promise</li>
+<li>2 个实例方法：.then 和 .catch</li>
+<li>4 个静态方法：Promise.all、Promise.race、Promise.resolve 和 Promise.reject<br>其中 Promise.race 不常用，本文忽略<br>下面逐个讲下他们的作用</li>
 </ul>
 <ol>
-<li>new Promise能将一个异步过程转化成promise对象。先有了promise对象，然后才有promise编程方式。</li>
-<li>.then用于为promise对象的状态注册回调函数。它会返回一个promise对象，所以可以进行链式调用，也就是.then后面可以继续.then。在注册的状态回调函数中，可以通过return语句改变.then返回的promise对象的状态，以及向后面.then注册的状态回调传递数据；也可以不使用return语句，那样默认就是将返回的promise对象resolve。</li>
-<li>.catch用于注册rejected状态的回调函数，同时该回调也是程序出错的回调，即如果前面的程序运行过程中出错，也会进入执行该回调函数。同.then一样，也会返回新的promise对象。</li>
-<li>调用Promise.resolve会返回一个状态为fulfilled状态的promise对象，参数会作为数据传递给后面的状态回调函数</li>
-<li>Promise.reject与Promise.resolve同理，区别在于返回的promise对象状态为rejected<br>（有待补充…）<h2 id="有趣的习题"><a href="#有趣的习题" class="headerlink" title="有趣的习题"></a>有趣的习题</h2>在网上看到的一个有意思的promise面试题</li>
+<li>new Promise 能将一个异步过程转化成 promise 对象。先有了 promise 对象，然后才有 promise 编程方式。</li>
+<li>.then 用于为 promise 对象的状态注册回调函数。它会返回一个 promise 对象，所以可以进行链式调用，也就是.then 后面可以继续.then。在注册的状态回调函数中，可以通过 return 语句改变.then 返回的 promise 对象的状态，以及向后面.then 注册的状态回调传递数据；也可以不使用 return 语句，那样默认就是将返回的 promise 对象 resolve。</li>
+<li>.catch 用于注册 rejected 状态的回调函数，同时该回调也是程序出错的回调，即如果前面的程序运行过程中出错，也会进入执行该回调函数。同.then 一样，也会返回新的 promise 对象。</li>
+<li>调用 Promise.resolve 会返回一个状态为 fulfilled 状态的 promise 对象，参数会作为数据传递给后面的状态回调函数</li>
+<li>Promise.reject 与 Promise.resolve 同理，区别在于返回的 promise 对象状态为 rejected<br>（有待补充…）</li>
 </ol>
+<h2 id="有趣的习题"><a href="#有趣的习题" class="headerlink" title="有趣的习题"></a>有趣的习题</h2><p>在网上看到的一个有意思的 promise 面试题</p>
 <p><a href="http://www.cnblogs.com/dojo-lzz/p/5495671.html" target="_blank" rel="noopener">实现红绿灯交替亮灯</a></p>
 <p>贴一下我的解答：</p>
-<p>思路：先用promise控制三种灯的执行顺序，然后用递归实现循环亮灯</p>
-<p>上码：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">function red() &#123;</span><br><span class="line">  console.log(&apos;red&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function green() &#123;</span><br><span class="line">  console.log(&apos;green&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function yellow() &#123;</span><br><span class="line">  console.log(&apos;yellow&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let light = (fn, timer) =&gt; new Promise(resolve =&gt; &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">    fn()</span><br><span class="line">    resolve()</span><br><span class="line">  &#125;, timer)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// times为交替次数</span><br><span class="line">function start(times) &#123;</span><br><span class="line">  if (!times) &#123;</span><br><span class="line">    return</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  times--</span><br><span class="line">  Promise.resolve()</span><br><span class="line">    .then(() =&gt; light(red, 3000))</span><br><span class="line">    .then(() =&gt; light(green, 1000))</span><br><span class="line">    .then(() =&gt; light(yellow, 2000))</span><br><span class="line">    .then(() =&gt; start(times))</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">start(3)</span><br></pre></td></tr></table></figure></p>
+<p>思路：先用 promise 控制三种灯的执行顺序，然后用递归实现循环亮灯</p>
+<p>上码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line">function red() &#123;</span><br><span class="line">  console.log(&apos;red&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function green() &#123;</span><br><span class="line">  console.log(&apos;green&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">function yellow() &#123;</span><br><span class="line">  console.log(&apos;yellow&apos;);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">let light = (fn, timer) =&gt; new Promise(resolve =&gt; &#123;</span><br><span class="line">  setTimeout(function() &#123;</span><br><span class="line">    fn()</span><br><span class="line">    resolve()</span><br><span class="line">  &#125;, timer)</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// times为交替次数</span><br><span class="line">function start(times) &#123;</span><br><span class="line">  if (!times) &#123;</span><br><span class="line">    return</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  times--</span><br><span class="line">  Promise.resolve()</span><br><span class="line">    .then(() =&gt; light(red, 3000))</span><br><span class="line">    .then(() =&gt; light(green, 1000))</span><br><span class="line">    .then(() =&gt; light(yellow, 2000))</span><br><span class="line">    .then(() =&gt; start(times))</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">start(3)</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -488,7 +500,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
@@ -525,7 +537,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#转自知乎-夜鸣东徙-理解JavaScript-Promise"><span class="nav-number">1.</span> <span class="nav-text">转自知乎 夜鸣东徙:理解JavaScript Promise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从一脸懵逼，到认识、掌握并使用Promise……"><span class="nav-number">2.</span> <span class="nav-text">从一脸懵逼，到认识、掌握并使用Promise……</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本文结构"><span class="nav-number">3.</span> <span class="nav-text">本文结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#剩下部分整理了一些Promise习题和示例，以及参考资料"><span class="nav-number">3.1.</span> <span class="nav-text">剩下部分整理了一些Promise习题和示例，以及参考资料</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#是什么"><span class="nav-number">4.</span> <span class="nav-text">是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">4.1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释一下"><span class="nav-number">4.2.</span> <span class="nav-text">解释一下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有什么用"><span class="nav-number">5.</span> <span class="nav-text">有什么用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#回调哪里不好了？"><span class="nav-number">5.1.</span> <span class="nav-text">回调哪里不好了？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步任务并行"><span class="nav-number">5.2.</span> <span class="nav-text">异步任务并行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用"><span class="nav-number">6.</span> <span class="nav-text">如何使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3种状态"><span class="nav-number">6.1.</span> <span class="nav-text">3种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise-API"><span class="nav-number">6.2.</span> <span class="nav-text">Promise API</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有趣的习题"><span class="nav-number">7.</span> <span class="nav-text">有趣的习题</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#转自知乎-夜鸣东徙-理解-JavaScript-Promise"><span class="nav-number">1.</span> <span class="nav-text">转自知乎 夜鸣东徙:理解 JavaScript Promise</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#从一脸懵逼，到认识、掌握并使用-Promise……"><span class="nav-number">2.</span> <span class="nav-text">从一脸懵逼，到认识、掌握并使用 Promise……</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本文结构"><span class="nav-number">3.</span> <span class="nav-text">本文结构</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#剩下部分整理了一些-Promise-习题和示例，以及参考资料"><span class="nav-number">3.1.</span> <span class="nav-text">剩下部分整理了一些 Promise 习题和示例，以及参考资料</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#是什么"><span class="nav-number">4.</span> <span class="nav-text">是什么</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本用法"><span class="nav-number">4.1.</span> <span class="nav-text">基本用法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#解释一下"><span class="nav-number">4.2.</span> <span class="nav-text">解释一下</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#总结"><span class="nav-number">4.3.</span> <span class="nav-text">总结</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有什么用"><span class="nav-number">5.</span> <span class="nav-text">有什么用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#回调哪里不好了？"><span class="nav-number">5.1.</span> <span class="nav-text">回调哪里不好了？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#异步任务并行"><span class="nav-number">5.2.</span> <span class="nav-text">异步任务并行</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如何使用"><span class="nav-number">6.</span> <span class="nav-text">如何使用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-种状态"><span class="nav-number">6.1.</span> <span class="nav-text">3 种状态</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Promise-API"><span class="nav-number">6.2.</span> <span class="nav-text">Promise API</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#有趣的习题"><span class="nav-number">7.</span> <span class="nav-text">有趣的习题</span></a></li></ol></div>
             
 
           </div>
