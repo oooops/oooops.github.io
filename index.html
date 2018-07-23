@@ -232,6 +232,128 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/2018/07/23/vue中如何定义自己的组件/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Hu">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="卡拉赞歌剧院">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/23/vue中如何定义自己的组件/" itemprop="url">vue中如何定义自己的组件</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-23T15:01:34+08:00">
+                2018-07-23
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="将自己在-vue-中写好的组件在全局注册"><a href="#将自己在-vue-中写好的组件在全局注册" class="headerlink" title="将自己在 vue 中写好的组件在全局注册"></a>将自己在 vue 中写好的组件在全局注册</h2><p>在 vue 项目中写好的组建需要在用到的地方 import,但是如果引入过多会很麻烦,就希望可以像 element 一样直接使用就行<br>这时候可以把写好的组建放到一个文件夹内,在新建一个 index.js 将这个 vue 在这里注册</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> Button <span class="keyword">from</span> <span class="string">'./button'</span></span><br><span class="line">Button.install = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">  Vue.component(Button.name,Button)</span><br><span class="line">&#125;</span><br><span class="line">exprot <span class="keyword">default</span> Button;</span><br></pre></td></tr></table></figure>
+<p>先引入了 Button,然后为 button 添加了一个 install 属性,在 main.js 使用 use 的时候就会用这个 <code>install</code><br><code>component()</code>中的第一个参数<code>Button.name</code>定义了注册到全局的标签名称,第二个参数<code>Button</code>定义了要注册的组件事那个,也就是上面引入的名称<br>最后用 export default</p>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="https://github.com/2018/07/17/webpack的path和publicPath/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -1377,7 +1499,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">日志</span>
                 </a>
               </div>
